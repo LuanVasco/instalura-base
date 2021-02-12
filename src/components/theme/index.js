@@ -41,18 +41,17 @@ const colors = {
   },
 };
 
-
 export default {
   colors,
   typographyVariants,
   breakpoints: {
-    xs: 0, //Extra small
-    sm: 480, // Small
-    md: 768, // Medium
-    lg: 992, // Large
-    xl: 1200, // Extra large
+    xs: 0,
+    sm: 480,
+    md: 768,
+    lg: 992,
+    xl: 1200,
   },
   borderRadius: '12px',
   transition: '200ms ease-in-out',
   fontFamily: '\'Rubik\', sans-serif',
-}; 
+};

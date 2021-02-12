@@ -1,31 +1,32 @@
-import { breakpointsMedia } from "./breakpointsMedia";
+import { breakpointsMedia } from './breakpointsMedia';
 
 export function propToStyle(propName) {
-  return function(props) {
+  // eslint-disable-next-line consistent-return
+  return (props) => {
     const propValue = props[propName];
-    if(typeof propValue === 'string'){
+    if (typeof propValue === 'string' || typeof propValue === 'number') {
       return {
-        [propName]: propValue
-      } 
+        [propName]: propValue,
+      };
     }
-    if(typeof propValue === 'object'){
+    if (typeof propValue === 'object') {
       return breakpointsMedia({
         xs: {
-          [propName]: propValue.xs
+          [propName]: propValue.xs,
         },
         sm: {
-          [propName]: propValue.sm
+          [propName]: propValue.sm,
         },
         md: {
-          [propName]: propValue.md
+          [propName]: propValue.md,
         },
         lg: {
-          [propName]: propValue.lg
+          [propName]: propValue.lg,
         },
         xl: {
-          [propName]: propValue.xl
+          [propName]: propValue.xl,
         },
-      })
+      });
     }
-  }
+  };
 }

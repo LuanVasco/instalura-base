@@ -14,32 +14,23 @@ export const TextStyleVariantsMap = {
     font-weight: ${({ theme }) => theme.typographyVariants.smallestException.fontWeight};
     line-height: ${({ theme }) => theme.typographyVariants.smallestException.lineHeight};
   `,
-}
-
-
+};
 
 const TextBase = styled.span`
-  ${(props) => TextStyleVariantsMap[props.variant]}
-  ${propToStyle('textAlign')}
-  ${propToStyle('marginBottom')}
-  ${propToStyle('margin')}
-
- /*  ${function(props) {
-    return propToStyle('textAlign', props);
-  }} */
- /*  ${function(props) {
-    console.log(props.textAlign);
-    return {
-      textAlign: props.textAlign,
-    }
-  }} */
+  ${(props) => TextStyleVariantsMap[props.variant]};
+  ${propToStyle('textAlign')};
+  ${propToStyle('marginBottom')};
+  ${propToStyle('margin')};
 `;
 
-export default function Text({ tag, variant, children, ...props}) {
+export default function Text({
+  tag, variant, children, ...props
+}) {
   return (
-    <TextBase 
+    <TextBase
       as={tag}
       variant={variant}
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
     >
       {children}
@@ -48,12 +39,12 @@ export default function Text({ tag, variant, children, ...props}) {
 }
 
 Text.propTypes = {
-  tag: PropTypes.string.isRequired,
+  tag: PropTypes.string,
   variant: PropTypes.string,
   children: PropTypes.node.isRequired,
-}
+};
 
 Text.defaultProps = {
   tag: 'span',
   variant: 'paragraph1',
-}
+};
