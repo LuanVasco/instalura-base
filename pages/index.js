@@ -39,13 +39,12 @@ export default function Home() {
         </Text>
 
         <Button
-          variant="primary.main"
           margin={{
             xs: 'auto',
             md: 'initial',
           }}
-          display="block"
-        >
+          variant="primary.main"
+          display="block">
           Cadastrar
         </Button>
       </div>
