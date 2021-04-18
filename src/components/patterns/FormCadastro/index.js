@@ -1,5 +1,3 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable no-restricted-globals */
 import React from 'react';
 import { Button } from '../../commons/Button';
 import { Box } from '../../foundation/layout/Box';
