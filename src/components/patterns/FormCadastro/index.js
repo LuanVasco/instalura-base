@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '../../commons/Button';
-import { Box } from '../../foundation/layout/Box';
-import { Grid } from '../../foundation/layout/Grid';
+import { Box } from '../../foundation/Layout/Box';
+import { Grid } from '../../foundation/Layout/Grid';
 import TextField from '../../forms/TextField';
 import Text from '../../foundation/Text';
 
